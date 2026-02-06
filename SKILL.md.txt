@@ -1,0 +1,99 @@
+---
+name: financial-analyst
+description: >
+  Financial analysis with 150+ formulas covering statement analysis, ratios, cash flow modeling, 
+  DCF, ROI, forecasting, variance analysis, break-even, real estate pro-formas with investor 
+  waterfalls (multi-tier, GP/LP, catch-up, clawback), and M&A (buy-side and sell-side). 
+  Triggers on: financial statements, QuickBooks exports, trial balances, ratio calculations, 
+  cash flow models, DCF valuations, investment ROI, forecasts, budget vs actual, break-even, 
+  RE pro-formas, waterfall structures, M&A transactions, or when user provides CSV/PDF/Excel 
+  financial data. Outputs Excel workbooks (.xlsx), interactive HTML/React dashboards, and 
+  PowerPoint presentations (.pptx).
+---
+
+# Financial Analyst Skill
+
+## Workflow
+
+### 1. Identify Analysis Type
+
+Determine which analysis category applies:
+
+| Category | Trigger Signals |
+|----------|----------------|
+| Financial Statement Analysis | "analyze these financials", trial balance, P&L, balance sheet, QuickBooks export |
+| Ratio Analysis | "calculate ratios", "financial health", "compare companies", DuPont |
+| Cash Flow Modeling | "cash flow model", "project cash flows", "three-statement model" |
+| DCF Valuation | "DCF", "valuation", "what is it worth", "discount rate", "terminal value" |
+| ROI / Investment Analysis | "return on investment", "should we buy this equipment", "payback", "NPV" |
+| Forecasting | "forecast", "project", "budget", "plan", "what will revenue be" |
+| Variance Analysis | "budget vs actual", "variance", "why did we miss", "performance review" |
+| Break-Even Analysis | "break-even", "how many units", "minimum revenue", "contribution margin" |
+| Real Estate Pro-Forma | "pro-forma", "NOI", "cap rate", "rental property", "development model" |
+| RE Waterfall | "waterfall", "investor returns", "preferred return", "promote", "GP/LP split" |
+| M&A (Buy-Side) | "acquisition", "should we buy", "target valuation", "synergies", "LBO" |
+| M&A (Sell-Side) | "sell the business", "adjusted EBITDA", "quality of earnings", "CIM" |
+
+### 2. Load Relevant References
+
+Based on analysis type, read the appropriate reference files. Do not load all references — only what is needed.
+
+- **Formulas**: `references/formulas.md` — Consult for any formula definitions, calculations, or context. This is the primary formula library with 150+ formulas organized by category. Always reference this when applying specific financial formulas.
+- **Financial Statements**: `references/financial-statements.md` — For statement analysis, ratio frameworks, variance analysis, common-size analysis, QuickBooks export processing.
+- **Cash Flow & DCF**: `references/cash-flow-dcf.md` — For cash flow modeling, DCF valuation, ROI analysis, break-even analysis, forecasting methods, sensitivity/scenario analysis.
+- **Real Estate**: `references/real-estate.md` — For pro-forma construction, waterfall structures (simple, multi-tier, GP/LP with catch-up and clawback), and RE-specific metrics.
+- **M&A**: `references/mna.md` — For buy-side and sell-side analysis, valuation methodologies, transaction structuring, due diligence.
+- **Output Guides**: `references/output-guides.md` — For Excel formatting standards, dashboard design, and presentation layout. Consult before producing any deliverable.
+
+### 3. Process Input Data
+
+Accept and process these input types:
+
+- **QuickBooks exports**: Clean headers, normalize accounts, handle sub-accounts. See financial-statements.md for processing steps.
+- **Trial balances**: Map accounts to standard categories (assets, liabilities, equity, revenue, expenses).
+- **Financial statements** (P&L, BS, SCF): Parse into structured data for analysis.
+- **CSV/Excel data**: Read, validate, and structure for analysis.
+- **PDFs**: Extract financial data from uploaded PDFs.
+- **Pydantic schemas**: Accept schema definitions from the schema-builder skill to define data structures.
+- **User-described models**: Build models from scratch based on verbal descriptions and assumptions.
+- **Comparable data**: Process comparable property sales, company financials, or analyst reports for valuation.
+
+### 4. Perform Analysis
+
+Apply formulas and frameworks from the relevant reference files. Key principles:
+
+- **Show your work**: Display key formulas used and intermediate calculations.
+- **Provide context**: Explain what each metric means for the specific situation.
+- **Flag anomalies**: Highlight unusual values, trends, or red flags.
+- **Benchmark**: Compare metrics to industry standards or historical trends when possible.
+- **Sensitivity**: Include sensitivity analysis for any valuation or investment decision.
+
+### 5. Produce Output
+
+Determine the appropriate output format based on the request:
+
+**Excel Workbook (.xlsx)**
+- Consult the xlsx skill (`/mnt/skills/public/xlsx/SKILL.md`) for workbook creation.
+- Apply formatting standards from `references/output-guides.md`.
+- Include: assumptions tab, analysis tabs, charts, sensitivity tables.
+- Color-code inputs (blue font/yellow fill), formulas (black), external data (green).
+
+**Interactive Dashboard (HTML/React)**
+- Build with Recharts, Tailwind CSS, and standard React patterns.
+- Include: KPI cards, primary chart, supporting visualizations, data tables.
+- Apply dashboard standards from `references/output-guides.md`.
+
+**Presentation (.pptx)**
+- Consult the pptx skill (`/mnt/skills/public/pptx/SKILL.md`) for presentation creation.
+- Follow financial presentation structure from `references/output-guides.md`.
+- Lead with conclusions, support with data (pyramid principle).
+
+**Combined outputs**: When analysis warrants multiple deliverables (e.g., Excel model + dashboard + presentation), produce all requested formats.
+
+### 6. Validate & Review
+
+Before delivering output:
+- Verify formulas cross-check (e.g., BS balances, CF reconciles to cash change)
+- Confirm assumptions are reasonable and documented
+- Ensure sensitivity ranges capture meaningful scenarios
+- Check that all charts and tables are labeled and sourced

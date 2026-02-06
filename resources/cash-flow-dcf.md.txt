@@ -1,0 +1,226 @@
+# Cash Flow Modeling, DCF & Investment Analysis
+
+## Table of Contents
+
+1. [Cash Flow Model Structure](#cash-flow-model-structure)
+2. [DCF Model Framework](#dcf-model-framework)
+3. [ROI & Investment Analysis](#roi--investment-analysis)
+4. [Break-Even Analysis](#break-even-analysis)
+5. [Forecasting Methods](#forecasting-methods)
+6. [Sensitivity & Scenario Analysis](#sensitivity--scenario-analysis)
+
+---
+
+## Cash Flow Model Structure
+
+### Three-Statement Model Flow
+```
+Income Statement → drives → Net Income
+                           ↓
+Balance Sheet    → drives → Working Capital Changes, D&A
+                           ↓
+Cash Flow Statement (constructed from IS + BS changes)
+                           ↓
+Free Cash Flow = CFO - CapEx
+```
+
+### Building a Cash Flow Projection
+1. **Revenue forecast**: Top-down (market size × share) or bottom-up (units × price, contracts, pipeline)
+2. **COGS projection**: Variable (% of revenue) + fixed components
+3. **OpEx projection**: Fixed base + variable component + step-function growth
+4. **Working capital**: DSO, DIO, DPO applied to revenue/COGS projections
+5. **CapEx**: Maintenance (% of revenue or % of PP&E) + growth/expansion (discrete projects)
+6. **Debt schedule**: Amortization, interest calculation, refinancing, new borrowings
+7. **Tax projection**: Effective rate applied to EBT, NOL utilization if applicable
+
+### Cash Flow Waterfall (Annual)
+```
+EBITDA
+- Cash Taxes
+- Maintenance CapEx
+- Changes in Working Capital
+= Unlevered Free Cash Flow
+
+- Interest Expense (after tax)
+- Mandatory Debt Amortization
+- Growth CapEx
++ Net New Borrowings
+= Levered Free Cash Flow (Cash Available for Distribution)
+```
+
+---
+
+## DCF Model Framework
+
+### Standard DCF Steps
+1. Project unlevered FCF for explicit forecast period (5-10 years)
+2. Calculate terminal value (exit multiple or perpetuity growth)
+3. Discount all cash flows at WACC
+4. Sum: Enterprise Value = PV of FCFs + PV of Terminal Value
+5. Bridge to equity: Equity Value = EV - Net Debt - Minority Interest - Preferred
+6. Per-share value (if applicable): Equity Value / Diluted Shares
+
+### WACC Calculation Checklist
+- Risk-free rate: 10-year government bond yield
+- Equity risk premium: Historical or forward-looking (5-7% typical US)
+- Beta: Relevered from comparable companies (or build-up method for private)
+- Size premium: Duff & Phelps for small companies
+- Company-specific risk: 1-5% for private company specific risks
+- Cost of debt: Actual borrowing rate or market rate for credit profile
+- Tax rate: Marginal rate for tax shield
+- Capital structure: Target or current (market values for public)
+
+### Terminal Value Best Practices
+- **Exit multiple**: Use median comparable EV/EBITDA; do not assume premium
+- **Perpetuity growth**: 2-3% (should not exceed long-term GDP growth)
+- Terminal value typically represents 60-80% of total enterprise value
+- Always cross-check: if using exit multiple, verify implied perpetuity growth and vice versa
+- Apply mid-year convention if cash flows are roughly evenly distributed
+
+### DCF Output Table
+```
+Year              1       2       3       4       5      TV
+Revenue          $X      $X      $X      $X      $X
+EBITDA           $X      $X      $X      $X      $X
+UFCF             $X      $X      $X      $X      $X     $X
+Discount Factor   X       X       X       X       X      X
+PV of UFCF       $X      $X      $X      $X      $X     $X
+
+Sum of PV of FCFs:        $X
+PV of Terminal Value:     $X
+Enterprise Value:         $X
+- Net Debt:              ($X)
+Equity Value:             $X
+```
+
+---
+
+## ROI & Investment Analysis
+
+### Project-Level ROI Framework
+```
+1. Define investment: Total upfront cost + ongoing incremental costs
+2. Define returns: Incremental revenue + cost savings + avoided costs
+3. Time horizon: Match to project life or payback period
+4. Discount rate: WACC or hurdle rate
+5. Calculate: NPV, IRR, payback period, MOIC
+```
+
+### Equipment Investment Analysis
+```
+Purchase Price + Installation + Training
+vs.
+Annual Cash Savings or Revenue Enhancement
+- Annual Operating Cost Increase (maintenance, insurance, utilities)
+= Net Annual Cash Benefit
+
+Metrics: Simple payback, NPV at hurdle rate, IRR
+Include: Tax effects (depreciation, Section 179, bonus depreciation)
+Consider: Financing alternatives (buy vs. lease)
+```
+
+### Capital Budgeting Decision Matrix
+| Metric | Accept If | Limitation |
+|--------|-----------|------------|
+| NPV | > 0 | Assumes reinvestment at WACC |
+| IRR | > Hurdle Rate | Multiple IRRs possible; scale-blind |
+| MIRR | > Hurdle Rate | More realistic reinvestment assumption |
+| Payback | < Target Period | Ignores time value and post-payback CFs |
+| PI | > 1.0 | Same as NPV in accept/reject |
+
+---
+
+## Break-Even Analysis
+
+### Single-Product Break-Even
+```
+BEP (Units) = Fixed Costs / (Price - Variable Cost per Unit)
+BEP (Revenue) = Fixed Costs / Contribution Margin Ratio
+```
+
+### Multi-Product Break-Even
+```
+Weighted Average CM = Σ (CM_i × Sales Mix %_i)
+BEP (Total Units) = Fixed Costs / Weighted Average CM
+BEP by Product = Total BEP × Sales Mix %_i
+```
+
+### Operating Leverage Break-Even
+```
+At break-even: Operating Income = 0
+Each additional dollar of revenue above BEP contributes at the CM ratio
+Degree of Operating Leverage = CM / Operating Income (undefined at BEP)
+```
+
+### Cash Break-Even
+```
+Cash BEP = (Fixed Costs - Non-Cash Fixed Costs) / CM per Unit
+Excludes depreciation and amortization from fixed costs
+Useful for: cash planning, survival analysis, distressed situations
+```
+
+### Break-Even Visualization
+Always produce a chart showing:
+- X-axis: Units or Revenue
+- Y-axis: Dollars
+- Lines: Total Revenue, Total Cost, Fixed Cost
+- Intersection: Break-even point
+- Shaded: Profit zone vs. Loss zone
+- Annotated: BEP units/revenue, margin of safety from current sales
+
+---
+
+## Forecasting Methods
+
+### Revenue Forecasting Approaches
+1. **Top-down**: TAM → SAM → SOM → Market share × Market growth
+2. **Bottom-up**: Customers × Revenue per customer, or Units × Price
+3. **Cohort-based**: Existing customer retention + new customer acquisition + expansion
+4. **Run-rate**: Annualize recent period, adjust for known changes
+5. **Regression**: Historical trend extrapolation with adjustments
+
+### Expense Forecasting
+- **Variable costs**: % of revenue (validate historical stability)
+- **Semi-variable**: Fixed base + variable component (stepwise)
+- **Fixed costs**: Flat or inflation-adjusted; add step-ups for capacity thresholds
+- **Headcount-driven**: Positions × compensation + benefits load + annual increases
+
+### Working Capital Forecasting
+- Apply DSO to projected revenue → AR
+- Apply DIO to projected COGS → Inventory
+- Apply DPO to projected COGS → AP
+- Other items: as % of revenue or flat/inflation-adjusted
+
+---
+
+## Sensitivity & Scenario Analysis
+
+### Two-Variable Data Table (Standard)
+```
+              WACC
+            8%    9%    10%   11%   12%
+Exit  5.0x  $X    $X    $X    $X    $X
+Mult  6.0x  $X    $X    $X    $X    $X
+      7.0x  $X    $X    $X    $X    $X
+      8.0x  $X    $X    $X    $X    $X
+```
+
+### Scenario Analysis Framework
+```
+                 Downside    Base     Upside
+Revenue Growth     X%        X%        X%
+EBITDA Margin      X%        X%        X%
+CapEx              $X        $X        $X
+Exit Multiple      X.Xx      X.Xx      X.Xx
+─────────────────────────────────────────
+Implied EV         $X        $X        $X
+IRR                X%        X%        X%
+MOIC               X.Xx      X.Xx      X.Xx
+```
+
+### Monte Carlo Simulation (Advanced)
+- Define probability distributions for key inputs
+- Run 1,000-10,000 iterations
+- Output: probability distribution of NPV/IRR
+- Report: P10, P50, P90 outcomes, expected value
+- Use when: High uncertainty, many correlated variables, risk quantification needed

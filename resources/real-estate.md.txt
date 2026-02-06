@@ -1,0 +1,219 @@
+# Real Estate Financial Analysis
+
+## Table of Contents
+
+1. [Standard Pro-Forma Structure](#standard-pro-forma-structure)
+2. [Pro-Forma Assumptions](#pro-forma-assumptions)
+3. [Investor Waterfall Structures](#investor-waterfall-structures)
+4. [Waterfall Calculation Methodology](#waterfall-calculation-methodology)
+
+---
+
+## Standard Pro-Forma Structure
+
+### Income Section
+```
+Potential Gross Income (PGI)
+  Base Rental Income (by unit type or tenant)
+  Rent Escalations (annual % or CPI-based)
+  Percentage Rent (retail properties)
+- Vacancy & Collection Loss (% of PGI, market-specific)
++ Other Income (parking, laundry, storage, CAM reimbursements, late fees)
+= Effective Gross Income (EGI)
+```
+
+### Operating Expense Section
+```
+Property Taxes (actual or projected with escalation)
+Insurance
+Utilities (owner-paid portion)
+Repairs & Maintenance
+Property Management Fee (% of EGI, typically 3-8%)
+Administrative / General
+Landscaping & Snow Removal
+Common Area Maintenance
+Marketing / Leasing Costs
+Reserves for Replacement (per unit or % of EGI)
+= Total Operating Expenses
+```
+
+### NOI and Below-the-Line
+```
+Effective Gross Income
+- Total Operating Expenses
+= Net Operating Income (NOI)
+
+- Debt Service (P&I)
+= Before-Tax Cash Flow (BTCF)
+
+- Capital Expenditures (non-recurring)
+- Tenant Improvements
+- Leasing Commissions
+= Net Cash Flow After CapEx
+```
+
+### Pro-Forma Projection Period
+- Standard: 5, 7, or 10-year hold periods
+- Include: annual escalation assumptions for revenue and expenses
+- Reversion/sale: apply exit cap rate to terminal year NOI
+- Deduct: disposition costs (typically 2-3% of sale price)
+- Calculate: equity multiple, IRR, cash-on-cash by year
+
+### Key Pro-Forma Metrics to Output
+- NOI by year, Cap Rate (going-in and exit), Cash-on-Cash Return, Levered/Unlevered IRR, Equity Multiple, DSCR by year, Average Cash Yield, Peak Equity, Profit on Sale
+
+---
+
+## Pro-Forma Assumptions
+
+### Revenue Assumptions
+- **Market Rent**: Current market rate per SF or per unit
+- **Rent Growth**: Annual escalation (2-3% typical, or CPI + spread)
+- **Vacancy Rate**: Market-specific, typically 3-10% stabilized
+- **Absorption Period**: Months to reach stabilized occupancy (lease-up deals)
+- **Concessions**: Free rent, TI allowances during lease-up
+- **Renewal Probability**: % of tenants expected to renew (65-80% typical)
+
+### Expense Assumptions
+- **Expense Growth**: Annual escalation (2-3% or CPI-based)
+- **Management Fee**: % of EGI (self-managed vs. third-party)
+- **Replacement Reserves**: Per unit ($250-500/unit/year typical) or % of EGI
+- **Property Tax Reassessment**: Model reassessment upon sale in applicable jurisdictions
+
+### Financing Assumptions
+- **Loan-to-Value**: 60-80% (conventional)
+- **Interest Rate**: Current market rate, fixed vs. variable
+- **Amortization**: 20-30 years typical
+- **Loan Term**: 5-10 years (balloon at maturity)
+- **Debt Service**: Monthly P&I calculated from loan terms
+- **Loan Fees**: Origination (0.5-1%), closing costs
+
+### Exit/Reversion Assumptions
+- **Hold Period**: Years until disposition
+- **Exit Cap Rate**: Typically 25-50 bps higher than going-in cap rate
+- **Disposition Costs**: 2-3% of sale price (broker, legal, transfer taxes)
+- **Capital Gains Tax**: If applicable (model pre-tax and after-tax returns)
+
+---
+
+## Investor Waterfall Structures
+
+### Structure 1: Simple Preferred Return + Promote
+
+The basic waterfall with a single preferred return hurdle.
+
+```
+Tier 1: Return OF Capital
+  - All distributions go to LP until 100% of contributed capital is returned
+
+Tier 2: Preferred Return
+  - All distributions go to LP until they have received [X]% IRR (typically 6-10%)
+  
+Tier 3: GP Catch-Up
+  - All (or a portion of) distributions go to GP until GP has received
+    their proportionate share of total profits
+
+Tier 4: Residual Split
+  - Remaining distributions split (e.g., 70% LP / 30% GP or 80/20)
+```
+
+**Parameters**: Preferred return rate, catch-up percentage, promote split, compounding method (simple vs. compound, annual vs. monthly)
+
+### Structure 2: Multi-Tier Waterfall
+
+Multiple return hurdles with escalating GP promote.
+
+```
+Tier 1: Return OF Capital
+  - 100% to LP until all contributed capital returned
+
+Tier 2: Preferred Return (Hurdle 1)
+  - 100% to LP until [8]% IRR achieved
+
+Tier 3: First Promote Split
+  - [70]% LP / [30]% GP until [12]% IRR achieved
+
+Tier 4: Second Promote Split
+  - [50]% LP / [50]% GP until [18]% IRR achieved
+
+Tier 5: Third Promote Split
+  - [20]% LP / [80]% GP on remaining distributions
+```
+
+**Common configurations**:
+- 2-tier: 8% pref → 70/30 split
+- 3-tier: 8% pref → 70/30 → 50/50
+- 4-tier: 8% pref → 70/30 → 50/50 → 20/80
+
+### Structure 3: GP/LP with Catch-Up and Clawback
+
+Full institutional waterfall with GP catch-up and clawback provisions.
+
+```
+Tier 1: Return OF Capital
+  - 100% to LP until all contributed capital returned
+
+Tier 2: Preferred Return
+  - 100% to LP until [8]% preferred return (cumulative, compounding)
+
+Tier 3: GP Catch-Up
+  - [100]% to GP until GP's share equals [20]% of total profits
+    distributed in Tiers 2 and 3
+    (This "catches up" the GP to their promote percentage)
+
+Tier 4: Residual Split
+  - [80]% LP / [20]% GP on all remaining distributions
+
+Clawback Provisions:
+  - At fund liquidation, if GP has received more than their entitled share
+    (due to early distributions exceeding final performance), GP must
+    return the excess to LPs
+  - Typically secured by GP escrow (30-50% of carry held back)
+  - True-up calculation performed at final disposition
+```
+
+**Key details**:
+- **Catch-up percentage**: Typically 50% or 100% to GP
+- **100% catch-up**: GP receives 100% of distributions until caught up
+- **50% catch-up**: GP receives 50%, LP receives 50% until caught up
+- **Clawback trigger**: When actual returns fall below modeled returns after all assets are disposed
+- **Escrow**: Portion of GP distributions held back pending final true-up
+
+---
+
+## Waterfall Calculation Methodology
+
+### Step-by-Step Calculation Process
+
+1. **Build the cash flow timeline**: Map all equity contributions (negative) and distributions (positive) by period
+2. **Track cumulative invested capital**: Running balance of unreturned capital
+3. **Calculate preferred return accrual**: Period-by-period preferred return on unreturned capital
+4. **Allocate distributions through tiers**: Apply each dollar of distribution to the highest-priority unfunded tier
+5. **Track IRR at each hurdle**: Use IRR to determine which tier applies at each distribution point
+6. **Handle catch-up**: If applicable, allocate to GP catch-up after preferred return is satisfied
+7. **Apply lookback/clawback**: At final disposition, true-up total distributions to ensure compliance
+
+### Compounding Conventions
+- **Simple preferred return**: Preferred = Capital × Rate × Time (no compounding)
+- **Annual compound**: Preferred compounds annually on unreturned capital
+- **Monthly compound**: More LP-favorable; preferred compounds monthly
+- **Cumulative vs. non-cumulative**: Cumulative accrues unpaid preferred; non-cumulative does not
+
+### IRR-Based vs. Return-Based Hurdles
+- **IRR-based hurdles**: Distribution tiers trigger based on LP IRR (time-weighted, accounts for contribution timing)
+- **Return multiple-based**: Tiers trigger based on equity multiple (e.g., 1.0x return of capital, 1.5x first hurdle)
+- **Preferred return-based**: Tiers based on cumulative preferred return being satisfied
+
+### Multi-Asset / Fund-Level Considerations
+- **Deal-by-deal waterfall**: Each investment has its own waterfall calculation
+- **Whole-fund waterfall**: Waterfall applies to aggregate fund performance (European-style)
+- **American vs. European**: American = deal-by-deal carry; European = whole-fund carry after return of all capital
+- **Recycling**: Returned capital from early exits reinvested before triggering waterfall
+
+### Implementation Notes for Excel
+- Use separate columns for each tier's allocation per period
+- Track running LP IRR using XIRR function on actual dates
+- Use MAX/MIN formulas to cap tier allocations
+- Build a distribution "waterfall" tab that flows left-to-right through tiers
+- Include sensitivity tables on key assumptions (exit cap rate, hold period, rent growth)
+- Provide a summary dashboard showing LP IRR, equity multiple, GP promote total

@@ -1,0 +1,215 @@
+# Financial Statement Analysis
+
+## Table of Contents
+
+1. [Income Statement Analysis](#income-statement-analysis)
+2. [Balance Sheet Analysis](#balance-sheet-analysis)
+3. [Cash Flow Statement Analysis](#cash-flow-statement-analysis)
+4. [Ratio Analysis Framework](#ratio-analysis-framework)
+5. [Variance Analysis Framework](#variance-analysis-framework)
+6. [Common-Size Analysis](#common-size-analysis)
+7. [Trend Analysis](#trend-analysis)
+8. [QuickBooks Export Processing](#quickbooks-export-processing)
+
+---
+
+## Income Statement Analysis
+
+### Standard Structure
+```
+Revenue / Net Sales
+- Cost of Goods Sold / Cost of Revenue
+= Gross Profit
+- Selling, General & Administrative (SG&A)
+- Research & Development
+- Depreciation & Amortization (if not in COGS)
+= Operating Income (EBIT)
++ Other Income / (Expense)
+- Interest Expense
+= Pre-Tax Income (EBT)
+- Income Tax Expense
+= Net Income
+```
+
+### Key Analysis Points
+- **Revenue quality**: Recurring vs. one-time, customer concentration, organic vs. acquired growth
+- **Gross margin drivers**: Input costs, pricing power, product mix, labor efficiency
+- **SG&A leverage**: Fixed vs. variable components, scaling with revenue
+- **Below-the-line items**: Separate operating performance from capital structure and tax effects
+- **Earnings quality**: Cash earnings vs. accrual adjustments, non-recurring items
+
+---
+
+## Balance Sheet Analysis
+
+### Standard Structure
+```
+ASSETS                              LIABILITIES & EQUITY
+Current Assets:                     Current Liabilities:
+  Cash & Equivalents                  Accounts Payable
+  Accounts Receivable                 Accrued Expenses
+  Inventory                           Current Portion of LTD
+  Prepaid Expenses                    Deferred Revenue (current)
+  Other Current Assets                Other Current Liabilities
+
+Non-Current Assets:                 Non-Current Liabilities:
+  Property, Plant & Equipment         Long-Term Debt
+  Intangible Assets                   Deferred Tax Liabilities
+  Goodwill                            Other Long-Term Liabilities
+  Other Non-Current Assets
+                                    Shareholders' Equity:
+                                      Common Stock
+                                      Retained Earnings
+                                      AOCI
+                                      Treasury Stock
+```
+
+### Key Analysis Points
+- **Asset quality**: Aging of receivables, inventory obsolescence, PP&E condition, goodwill impairment risk
+- **Liability completeness**: Off-balance-sheet items, operating leases (ASC 842), contingent liabilities
+- **Working capital adequacy**: Current ratio, quick ratio, NWC trends
+- **Capital structure**: Debt-to-equity, maturity schedule, fixed vs. variable rate mix
+- **Book value vs. fair value**: Particularly for real estate, equipment, and intangibles
+
+---
+
+## Cash Flow Statement Analysis
+
+### Standard Structure (Indirect Method)
+```
+Operating Activities:
+  Net Income
+  + Depreciation & Amortization
+  + Stock-Based Compensation
+  + Other Non-Cash Items
+  - Gain on Asset Sales
+  Changes in Working Capital:
+    - Increase in AR / + Decrease in AR
+    - Increase in Inventory / + Decrease in Inventory
+    + Increase in AP / - Decrease in AP
+    + Increase in Accrued / - Decrease in Accrued
+= Cash from Operations (CFO)
+
+Investing Activities:
+  - Capital Expenditures
+  - Acquisitions
+  + Proceeds from Asset Sales
+  - Purchases of Investments
+= Cash from Investing (CFI)
+
+Financing Activities:
+  + Debt Borrowings
+  - Debt Repayments
+  + Equity Issuance
+  - Dividends Paid
+  - Share Buybacks
+= Cash from Financing (CFF)
+
+Net Change in Cash = CFO + CFI + CFF
+```
+
+### Key Analysis Points
+- **CFO vs. Net Income**: Quality of earnings; persistent divergence is a red flag
+- **CapEx classification**: Maintenance vs. growth CapEx (critical for FCF)
+- **Working capital trends**: Are changes sustainable or one-time?
+- **Free cash flow conversion**: FCF / Net Income ratio (>80% is strong)
+- **Cash allocation**: How is FCF used — deleveraging, dividends, buybacks, growth CapEx, M&A?
+
+---
+
+## Ratio Analysis Framework
+
+When performing ratio analysis, organize ratios into categories and provide context:
+
+### Category Sequence
+1. **Profitability**: Gross margin → Operating margin → Net margin → EBITDA margin → ROE → ROA → ROIC
+2. **Liquidity**: Current ratio → Quick ratio → Cash ratio → Operating CF ratio
+3. **Leverage**: Debt/Equity → Debt/EBITDA → Net Debt/EBITDA → Interest coverage → FCCR
+4. **Efficiency**: Asset turnover → AR turnover → Inventory turnover → Cash conversion cycle
+5. **Valuation** (if applicable): EV/EBITDA → EV/Revenue → P/E → P/B
+
+### Presentation Standards
+- Show 3-5 years of trend data for each ratio
+- Include industry benchmarks or peer comparisons when available
+- Flag ratios outside normal ranges with directional commentary
+- Show DuPont decomposition when ROE analysis is relevant
+- Always pair profitability ratios with cash flow quality metrics
+
+---
+
+## Variance Analysis Framework
+
+### Budget vs. Actual Variance Structure
+```
+                    Budget      Actual      Variance    Var %     Favorable/Unfavorable
+Revenue             $X          $X          $X          X%        F/U
+COGS                $X          $X          $X          X%        F/U
+Gross Profit        $X          $X          $X          X%        F/U
+  Gross Margin %    X%          X%          Xbps
+Operating Expenses  $X          $X          $X          X%        F/U
+  [by category]
+Operating Income    $X          $X          $X          X%        F/U
+```
+
+### Variance Decomposition
+- **Revenue variance**: Volume × Price × Mix analysis
+- **COGS variance**: Material price × Material usage × Labor rate × Labor efficiency × Overhead
+- **SG&A variance**: Headcount × Compensation × Discretionary spending
+- **Margin variance**: Identify whether margin changes are driven by revenue mix, cost changes, or both
+
+### Reporting Best Practices
+- Sort variances by absolute magnitude (largest first)
+- Provide root cause explanation for material variances (>5% or >$X threshold)
+- Distinguish controllable vs. uncontrollable variances
+- Include year-over-year and sequential (month-over-month) comparison
+- Project full-year impact of YTD variances
+
+---
+
+## Common-Size Analysis
+
+### Income Statement (Vertical)
+Express all line items as % of revenue. Enables comparison across companies of different sizes and across periods.
+
+### Balance Sheet (Vertical)
+Express all items as % of total assets. Reveals capital allocation and financing structure.
+
+### Horizontal Analysis
+Express each line item as % of base year (index to 100). Reveals growth trends and structural shifts.
+
+---
+
+## Trend Analysis
+
+### Multi-Period Analysis
+- Minimum 3 years; prefer 5 years for meaningful trends
+- Calculate CAGR for key metrics
+- Identify inflection points and structural changes
+- Separate organic trends from acquisition effects
+- Normalize for one-time items before trending
+
+---
+
+## QuickBooks Export Processing
+
+### Common Export Formats
+- **Profit & Loss (Detail/Summary)**: CSV/Excel export from Reports → Standard
+- **Balance Sheet (Detail/Summary)**: CSV/Excel export
+- **Trial Balance**: Most useful for detailed account-level analysis
+- **General Ledger**: Transaction-level detail
+- **AR/AP Aging**: Customer/vendor-level detail
+
+### Processing Steps
+1. **Clean headers**: QuickBooks exports often have multi-row headers, date ranges, and company name rows — strip to single header row
+2. **Normalize accounts**: Map QB account names to standard financial statement categories
+3. **Handle sub-accounts**: QB uses indented sub-accounts (e.g., "Utilities:Electric") — parse hierarchy
+4. **Class/Location handling**: If multi-entity or departmental, pivot by class or location
+5. **Accrual vs. Cash**: Verify basis; QB allows both — confirm with user which is exported
+6. **Reclassify if needed**: Owner draws → distributions, loan proceeds → financing, intercompany → eliminate
+
+### Common QB Data Issues
+- Uncategorized income/expenses in "Ask My Accountant" or "Uncategorized"
+- Misclassified items (e.g., equipment purchases in expenses vs. fixed assets)
+- Missing depreciation entries (cash-basis clients)
+- Unreconciled bank balances
+- Intercompany transactions not eliminated

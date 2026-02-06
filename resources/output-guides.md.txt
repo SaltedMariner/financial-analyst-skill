@@ -1,0 +1,139 @@
+# Output Formatting Guide
+
+Standards for producing financial analysis outputs across Excel, dashboards, and presentations.
+
+---
+
+## Excel Workbook Standards
+
+### Workbook Structure
+```
+Tab Order:
+1. Cover / Summary (key metrics, date, preparer)
+2. Assumptions (all inputs in one place, colored cells)
+3. Income Statement
+4. Balance Sheet
+5. Cash Flow Statement
+6. Supporting Schedules (debt, depreciation, working capital)
+7. Analysis (ratios, DCF, waterfall, etc.)
+8. Sensitivity / Scenarios
+9. Charts / Dashboard
+```
+
+### Formatting Conventions
+- **Inputs/Assumptions**: Blue font, light yellow background
+- **Formulas**: Black font, no background
+- **Hard-coded values from external sources**: Green font
+- **Links to other sheets**: Black font, italic (optional)
+- **Headers**: Bold, dark background (navy/dark gray), white font
+- **Sub-headers**: Bold, medium gray background
+- **Borders**: Light gray gridlines; heavier borders for totals and section breaks
+- **Number formats**: Currency with commas (no decimals for large numbers), percentages with 1 decimal, ratios with 2 decimals, dates as MM/DD/YYYY
+- **Negative numbers**: Parentheses, red font for variances
+- **Row height**: Consistent; use merged cells sparingly
+- **Column width**: Uniform for data columns; wider for labels
+
+### Formula Best Practices
+- No hard-coded numbers in formulas — reference assumption cells
+- Use named ranges for key assumptions (discount_rate, tax_rate, etc.)
+- Keep formulas consistent across rows/columns for auditability
+- Use IFERROR for display (not to mask errors in development)
+- Document complex formulas with cell comments
+- Use data validation for input cells (dropdowns, min/max)
+
+### Excel Financial Model Color Code Summary
+| Color | Usage |
+|-------|-------|
+| Blue font, yellow fill | User inputs/assumptions |
+| Black font, no fill | Calculated formulas |
+| Green font | External data/hard-coded from source |
+| Gray fill | Section headers and labels |
+| Red font (parentheses) | Negative values / unfavorable variances |
+
+---
+
+## Interactive Dashboard Standards (HTML/React)
+
+### Layout Principles
+- **KPI cards at top**: 4-6 key metrics in summary cards with sparklines or delta indicators
+- **Primary chart**: Large, prominent visualization of the most important analysis
+- **Supporting charts**: 2-4 secondary visualizations below
+- **Data tables**: Sortable, with conditional formatting (heat maps for variances)
+- **Filters/controls**: Date range, scenario selector, entity/segment selector
+
+### Chart Selection Guide
+| Analysis Type | Recommended Chart |
+|--------------|-------------------|
+| Trend over time | Line chart or area chart |
+| Comparison across categories | Bar chart (horizontal for many categories) |
+| Part-to-whole | Stacked bar, treemap, or donut |
+| Distribution | Histogram or box plot |
+| Correlation | Scatter plot |
+| Waterfall (bridge) | Waterfall chart (revenue bridge, EBITDA bridge) |
+| Variance (budget vs. actual) | Bullet chart or grouped bar |
+| Financial statements | Formatted table with conditional coloring |
+| Sensitivity | Heat map table |
+| Cash flow timeline | Combination chart (bar + line) |
+
+### Dashboard Color Palette
+- **Primary**: Professional blue (#2563EB) for main metrics
+- **Positive/Favorable**: Green (#059669)
+- **Negative/Unfavorable**: Red (#DC2626)
+- **Neutral**: Gray (#6B7280)
+- **Background**: White (#FFFFFF) or light gray (#F9FAFB)
+- **Text**: Dark gray (#111827) for readability
+- Adapt colors based on context; maintain contrast accessibility (WCAG AA minimum)
+
+### Key React Libraries for Financial Dashboards
+- **Recharts**: Line, bar, area, pie, scatter, composed charts
+- **Lodash**: Data transformation and aggregation
+- **D3**: Custom visualizations (waterfall charts, Sankey diagrams)
+- **Tailwind CSS**: Layout, spacing, typography
+
+### Dashboard Interactivity
+- Scenario toggles (base/upside/downside)
+- Period selector (monthly, quarterly, annual)
+- Hover tooltips showing detailed values
+- Expandable/collapsible sections for detailed data
+- Export functionality (where applicable)
+
+---
+
+## Presentation Standards (PowerPoint)
+
+### Slide Structure for Financial Reports
+```
+1. Title Slide (company, analysis type, date, preparer)
+2. Executive Summary (key findings, 3-5 bullet points max)
+3. Financial Overview (revenue, EBITDA, key metrics snapshot)
+4. Detailed Analysis (1-3 slides per analysis section)
+5. Valuation Summary / Conclusion
+6. Sensitivity Analysis
+7. Appendix (detailed tables, assumptions, methodology notes)
+```
+
+### Slide Design Principles
+- **One key message per slide**: Title should state the takeaway, not describe the content
+- **Data-ink ratio**: Maximize data, minimize decoration
+- **Font sizes**: Title 28-32pt, body 18-24pt, footnotes 10-12pt
+- **Charts**: Clean, labeled, with source noted
+- **Tables**: Minimal gridlines, highlight key rows/columns
+- **Color**: Use sparingly and consistently; match dashboard palette
+
+### Financial Slide Templates
+
+**KPI Summary Slide**: 4-6 metric boxes with current value, prior period, and delta arrow
+
+**Bridge/Waterfall Slide**: Horizontal waterfall showing revenue or EBITDA walk from prior period
+
+**Comparison Table Slide**: Side-by-side comparison (company A vs. B, or actual vs. budget)
+
+**Valuation Football Field**: Horizontal bar chart showing valuation range by methodology
+
+**Sensitivity Grid**: 2D table with color-coded cells (green = favorable, red = unfavorable)
+
+### Presentation Narrative Flow
+- Lead with conclusions, support with data (pyramid principle)
+- Every chart needs a "so what" — the title or callout box should state the insight
+- Use appendix for detailed backup; keep main deck to 10-15 slides
+- For M&A: follow standard structure (situation overview → valuation → transaction → recommendation)

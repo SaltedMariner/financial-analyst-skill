@@ -1,0 +1,204 @@
+# M&A Analysis Reference
+
+## Table of Contents
+
+1. [Buy-Side Analysis Framework](#buy-side-analysis-framework)
+2. [Sell-Side Analysis Framework](#sell-side-analysis-framework)
+3. [Valuation Methodologies](#valuation-methodologies)
+4. [Transaction Structuring](#transaction-structuring)
+5. [Due Diligence Financial Checklist](#due-diligence-financial-checklist)
+
+---
+
+## Buy-Side Analysis Framework
+
+### Screening & Initial Assessment
+1. **Strategic fit**: Revenue synergies, market expansion, vertical integration, talent acquisition
+2. **Financial profile**: Revenue, EBITDA, margins, growth rate, capital intensity
+3. **Valuation range**: Quick EV/EBITDA and EV/Revenue multiples vs. industry benchmarks
+4. **Deal capacity**: Affordability check against acquirer's balance sheet and debt capacity
+
+### Financial Model Components (Buy-Side)
+```
+1. Standalone Target Model
+   - Historical financials (3-5 years)
+   - Normalized/adjusted EBITDA
+   - Working capital analysis (NWC peg)
+   - CapEx requirements (maintenance vs. growth)
+   - Projected financials (3-5 years forward)
+
+2. Synergy Model
+   - Revenue synergies (cross-sell, price, market expansion) — discount heavily, phase in over 2-3 years
+   - Cost synergies (headcount, facilities, procurement) — higher confidence, achieve in 12-18 months
+   - Integration costs (one-time: severance, systems, rebranding)
+   - Net synergy timeline and NPV
+
+3. Transaction Model
+   - Sources & Uses (purchase price, fees, financing)
+   - Pro-forma balance sheet (combined, post-transaction)
+   - Goodwill and purchase price allocation
+   - Accretion/dilution analysis (public acquirers)
+   - Pro-forma credit metrics (leverage, coverage)
+
+4. Returns Analysis
+   - IRR to acquirer under base/upside/downside cases
+   - Sensitivity on purchase multiple, synergies achieved, and exit timing
+   - Payback period on investment
+```
+
+### Key Buy-Side Metrics
+- Maximum purchase price at target return threshold
+- Implied EV/EBITDA at various offer prices
+- Pro-forma leverage (Debt/EBITDA) post-close
+- Synergy breakeven (minimum synergies to justify price)
+- Accretion/dilution timeline
+
+---
+
+## Sell-Side Analysis Framework
+
+### Preparation Phase
+1. **Quality of Earnings (QoE)**: Normalize EBITDA for non-recurring, owner-specific, and pro-forma items
+2. **Adjusted EBITDA bridge**: Walk from reported EBITDA to adjusted — every add-back must be defensible
+3. **Growth story**: Revenue trajectory, backlog, pipeline, market tailwinds
+4. **Working capital normalization**: Determine target NWC for purchase agreement
+
+### Sell-Side Financial Model
+```
+1. Historical Analysis (3-5 years)
+   - Revenue bridge (volume, price, mix, new customers)
+   - Margin trend analysis with explanations
+   - Working capital seasonality and normalized level
+   - CapEx history (maintenance vs. growth)
+   - Cash flow conversion analysis
+
+2. Adjusted EBITDA Schedule
+   - Start: Reported EBITDA
+   - Add-backs: Owner compensation above market, one-time expenses,
+     non-recurring items, related party adjustments, pro-forma cost saves
+   - Result: Adjusted/Run-Rate EBITDA (the "marketed" number)
+
+3. Forward Projections (Management Case)
+   - Base case: Conservative, achievable
+   - Management case: Upside with credible support
+   - Revenue and EBITDA growth supported by specific drivers
+   - Demonstrate operating leverage
+
+4. Valuation Support
+   - Comparable company multiples
+   - Precedent transaction multiples
+   - DCF with sensitivity analysis
+   - Value creation potential for buyer (shows why premium is justified)
+```
+
+### Key Sell-Side Metrics
+- Adjusted EBITDA with full add-back schedule
+- Revenue and EBITDA CAGR (trailing and projected)
+- Customer concentration (top 10 customers as % of revenue)
+- Revenue visibility (recurring vs. one-time %)
+- Margin expansion opportunity
+- Defensible competitive advantages
+
+---
+
+## Valuation Methodologies
+
+### Comparable Company Analysis (Comps)
+1. Select peer universe: Same industry, similar size, growth, margins
+2. Calculate current trading multiples: EV/EBITDA, EV/Revenue, P/E
+3. Determine relevant range (25th-75th percentile)
+4. Apply to target metrics (LTM and NTM)
+5. Apply illiquidity discount for private targets (15-30%)
+
+### Precedent Transaction Analysis
+1. Identify relevant transactions: Same industry, similar size, recent (3-5 years)
+2. Calculate transaction multiples: EV/EBITDA, EV/Revenue at close
+3. Note control premiums embedded in prices
+4. Adjust for market conditions at time of transaction
+5. Apply range to target
+
+### Discounted Cash Flow (DCF)
+1. Project unlevered free cash flows (5-10 year explicit period)
+2. Calculate terminal value (exit multiple or perpetuity growth)
+3. Discount at WACC
+4. Sum PV of projected cash flows + PV of terminal value
+5. Subtract net debt → implied equity value
+6. Sensitivity table on WACC and terminal growth/exit multiple
+
+### Valuation Summary (Football Field)
+Present all methodologies side-by-side:
+```
+                          Low        Mid        High
+Comparable Companies     5.0x       6.5x       8.0x
+Precedent Transactions   6.0x       7.0x       8.5x
+DCF Analysis            $XX M      $XX M      $XX M
+LBO (Floor Valuation)    4.5x       5.5x       6.5x
+```
+
+---
+
+## Transaction Structuring
+
+### Sources & Uses Table
+```
+SOURCES                          USES
+Senior Debt       $XX M          Enterprise Value    $XX M
+Mezzanine Debt    $XX M          Transaction Fees    $XX M
+Seller Note       $XX M          Financing Fees      $XX M
+Equity (Buyer)    $XX M          Working Capital Adj $XX M
+Rollover Equity   $XX M          Escrow/Holdback     $XX M
+─────────────────────────       ─────────────────────────
+Total Sources     $XX M          Total Uses          $XX M
+```
+
+### Purchase Price Adjustments
+- **Net Working Capital Adjustment**: Actual NWC vs. target (peg) at close; dollar-for-dollar adjustment
+- **Net Debt Adjustment**: Debt-free/cash-free basis; buyer assumes no debt, seller retains excess cash
+- **Earnout**: Contingent consideration tied to future performance milestones
+- **Escrow/Holdback**: Portion held back (10-15%) for indemnification claims
+- **Seller Note**: Deferred payment, typically 10-20% of purchase price
+
+### Working Capital Peg Methodology
+1. Calculate NWC for each of the trailing 12 months
+2. Exclude seasonality spikes and anomalies
+3. Compute trailing 12-month average as the peg
+4. Define NWC components (include/exclude items)
+5. Set collar (band around peg where no adjustment occurs, typically ±1-2%)
+
+---
+
+## Due Diligence Financial Checklist
+
+### Historical Financials
+- [ ] 3-5 years audited/reviewed financial statements
+- [ ] Monthly financials for trailing 24 months
+- [ ] Tax returns for 3-5 years
+- [ ] Revenue by customer, product line, geography
+- [ ] Gross margin by product/service line
+
+### Quality of Earnings
+- [ ] EBITDA adjustments schedule with supporting documentation
+- [ ] Non-recurring items identified and quantified
+- [ ] Owner/related party transactions normalized
+- [ ] Pro-forma adjustments (new contracts, terminated costs)
+- [ ] Revenue recognition policy review
+
+### Working Capital
+- [ ] Monthly NWC calculations trailing 24 months
+- [ ] Aging of accounts receivable (30/60/90/120+)
+- [ ] Inventory analysis (raw, WIP, finished; obsolescence)
+- [ ] Accounts payable aging and payment terms
+- [ ] Accrued liabilities detail and adequacy
+
+### Debt & Obligations
+- [ ] Complete debt schedule (all instruments, terms, covenants)
+- [ ] Off-balance sheet obligations (operating leases, guarantees)
+- [ ] Capital lease obligations
+- [ ] Contingent liabilities (litigation, environmental, warranties)
+
+### Projections
+- [ ] Management projections with underlying assumptions
+- [ ] Historical accuracy of prior projections
+- [ ] Revenue pipeline/backlog supporting growth
+- [ ] Planned capital expenditures
+- [ ] Headcount and compensation plans

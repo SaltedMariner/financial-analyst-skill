@@ -1,0 +1,749 @@
+# Financial Formulas Library
+
+Comprehensive reference of financial formulas organized by category. Each formula includes its definition, calculation, and context for when to use it.
+
+## Table of Contents
+
+1. [Profitability Ratios](#profitability-ratios)
+2. [Liquidity Ratios](#liquidity-ratios)
+3. [Leverage / Solvency Ratios](#leverage--solvency-ratios)
+4. [Efficiency / Activity Ratios](#efficiency--activity-ratios)
+5. [Valuation Ratios](#valuation-ratios)
+6. [Cash Flow Metrics](#cash-flow-metrics)
+7. [Return Metrics](#return-metrics)
+8. [Growth Metrics](#growth-metrics)
+9. [Break-Even & Margin Analysis](#break-even--margin-analysis)
+10. [Discounted Cash Flow Formulas](#discounted-cash-flow-formulas)
+11. [Weighted Average Cost of Capital](#weighted-average-cost-of-capital)
+12. [Real Estate Formulas](#real-estate-formulas)
+13. [M&A Formulas](#ma-formulas)
+14. [Debt & Coverage Ratios](#debt--coverage-ratios)
+15. [Working Capital Metrics](#working-capital-metrics)
+16. [Statistical & Forecasting Formulas](#statistical--forecasting-formulas)
+17. [Depreciation Methods](#depreciation-methods)
+18. [Tax-Related Formulas](#tax-related-formulas)
+
+---
+
+## Profitability Ratios
+
+### Gross Profit Margin
+- **Formula**: `(Revenue - COGS) / Revenue`
+- **Definition**: Percentage of revenue remaining after direct costs of production.
+- **Use when**: Evaluating pricing strategy, production efficiency, or comparing cost structures across companies or periods. Core metric for any financial statement analysis.
+
+### Operating Profit Margin (EBIT Margin)
+- **Formula**: `EBIT / Revenue` or `(Revenue - COGS - Operating Expenses) / Revenue`
+- **Definition**: Percentage of revenue remaining after all operating expenses, before interest and taxes.
+- **Use when**: Assessing operational efficiency independent of capital structure and tax strategy. Key comparability metric across firms.
+
+### Net Profit Margin
+- **Formula**: `Net Income / Revenue`
+- **Definition**: Percentage of revenue that becomes profit after all expenses.
+- **Use when**: Evaluating bottom-line profitability. Useful for trend analysis and peer comparison, but affected by capital structure and tax differences.
+
+### EBITDA Margin
+- **Formula**: `EBITDA / Revenue`
+- **Definition**: Earnings before interest, taxes, depreciation, and amortization as a percentage of revenue.
+- **Use when**: Comparing operating performance across companies with different capital structures, tax situations, and depreciation policies. Primary metric in M&A valuations.
+
+### EBITDA
+- **Formula**: `Net Income + Interest + Taxes + Depreciation + Amortization` or `Operating Income + Depreciation + Amortization`
+- **Definition**: Proxy for operating cash generation before capital structure effects.
+- **Use when**: Valuation multiples, debt covenant analysis, M&A pricing, comparing companies with different D&A profiles.
+
+### Adjusted EBITDA
+- **Formula**: `EBITDA ± Non-Recurring Items ± Owner Adjustments ± Pro-Forma Adjustments`
+- **Definition**: EBITDA normalized for one-time, non-recurring, or owner-specific items.
+- **Use when**: M&A sell-side presentations, business valuations, establishing normalized earning power. Common adjustments include owner compensation above market, one-time legal costs, non-recurring revenue.
+
+### SDE (Seller's Discretionary Earnings)
+- **Formula**: `Net Income + Owner Compensation + Interest + Depreciation + Amortization + Non-Recurring Expenses`
+- **Definition**: Total financial benefit available to a single owner-operator.
+- **Use when**: Valuing small businesses (typically < $5M revenue) where the owner is actively involved. Standard for Main Street M&A transactions.
+
+### Return on Sales (ROS)
+- **Formula**: `Operating Income / Net Sales`
+- **Definition**: Operating efficiency per dollar of sales.
+- **Use when**: Similar to operating margin; used in operational benchmarking and incentive compensation structures.
+
+---
+
+## Liquidity Ratios
+
+### Current Ratio
+- **Formula**: `Current Assets / Current Liabilities`
+- **Definition**: Ability to pay short-term obligations with short-term assets.
+- **Use when**: Credit analysis, loan underwriting, assessing short-term solvency. Generally healthy above 1.5; varies by industry.
+
+### Quick Ratio (Acid Test)
+- **Formula**: `(Current Assets - Inventory - Prepaid Expenses) / Current Liabilities`
+- **Definition**: Ability to meet short-term obligations without relying on inventory sales.
+- **Use when**: More conservative liquidity test, especially relevant for businesses with slow-moving inventory. Critical for manufacturing and retail.
+
+### Cash Ratio
+- **Formula**: `(Cash + Cash Equivalents) / Current Liabilities`
+- **Definition**: Most conservative liquidity measure — only cash on hand vs. short-term obligations.
+- **Use when**: Stress testing, distressed company analysis, or evaluating companies with questionable receivable or inventory quality.
+
+### Operating Cash Flow Ratio
+- **Formula**: `Operating Cash Flow / Current Liabilities`
+- **Definition**: Ability to cover short-term liabilities from actual cash generated by operations.
+- **Use when**: More reliable than current ratio for companies with accrual timing issues. Preferred by sophisticated credit analysts.
+
+### Net Working Capital
+- **Formula**: `Current Assets - Current Liabilities`
+- **Definition**: Dollar amount of short-term assets in excess of short-term obligations.
+- **Use when**: M&A working capital targets/pegs, assessing operational capital needs, loan covenants.
+
+---
+
+## Leverage / Solvency Ratios
+
+### Debt-to-Equity Ratio
+- **Formula**: `Total Debt / Total Shareholders' Equity`
+- **Definition**: Proportion of debt vs. equity financing.
+- **Use when**: Assessing capital structure risk, comparing leverage across peers, loan underwriting. Higher = more levered.
+
+### Debt-to-Assets Ratio
+- **Formula**: `Total Debt / Total Assets`
+- **Definition**: Percentage of assets financed by debt.
+- **Use when**: Evaluating balance sheet leverage; useful in real estate and capital-intensive industries.
+
+### Debt-to-EBITDA Ratio
+- **Formula**: `Total Debt / EBITDA`
+- **Definition**: Number of years of EBITDA required to pay off all debt.
+- **Use when**: Most common leverage metric in M&A, leveraged buyouts, and bank covenant analysis. Typical thresholds: 2-3x for senior debt, 4-6x for total debt in LBOs.
+
+### Net Debt-to-EBITDA
+- **Formula**: `(Total Debt - Cash) / EBITDA`
+- **Definition**: Leverage adjusted for available cash.
+- **Use when**: More accurate leverage picture when the company holds significant cash. Standard in M&A.
+
+### Equity Multiplier
+- **Formula**: `Total Assets / Total Shareholders' Equity`
+- **Definition**: How much of the asset base is funded by equity.
+- **Use when**: DuPont analysis decomposition, understanding financial leverage contribution to ROE.
+
+### Interest Coverage Ratio (Times Interest Earned)
+- **Formula**: `EBIT / Interest Expense`
+- **Definition**: Ability to service interest payments from operating earnings.
+- **Use when**: Debt capacity analysis, credit ratings, bond covenant compliance. Below 1.5x signals distress.
+
+### Fixed Charge Coverage Ratio (FCCR)
+- **Formula**: `(EBIT + Fixed Charges Before Tax) / (Fixed Charges Before Tax + Interest)`
+- **Definition**: Ability to cover all fixed obligations (rent, leases, debt service).
+- **Use when**: SBA loan underwriting (requires 1.25x minimum), commercial lending, lease-heavy businesses.
+
+### Debt Service Coverage Ratio (DSCR)
+- **Formula**: `Net Operating Income / Total Debt Service`
+- **Definition**: Ability to cover debt principal and interest payments.
+- **Use when**: Real estate lending (typically requires 1.20-1.25x), project finance, commercial loans.
+
+---
+
+## Efficiency / Activity Ratios
+
+### Inventory Turnover
+- **Formula**: `COGS / Average Inventory`
+- **Definition**: How many times inventory is sold and replaced during a period.
+- **Use when**: Evaluating inventory management efficiency, identifying obsolescence risk, working capital optimization.
+
+### Days Inventory Outstanding (DIO)
+- **Formula**: `(Average Inventory / COGS) × 365`
+- **Definition**: Average number of days to sell inventory.
+- **Use when**: Cash conversion cycle analysis, working capital management, supply chain benchmarking.
+
+### Accounts Receivable Turnover
+- **Formula**: `Net Credit Sales / Average Accounts Receivable`
+- **Definition**: How efficiently the company collects receivables.
+- **Use when**: Credit policy assessment, collection efficiency, identifying potential bad debt issues.
+
+### Days Sales Outstanding (DSO)
+- **Formula**: `(Average Accounts Receivable / Revenue) × 365`
+- **Definition**: Average number of days to collect payment after a sale.
+- **Use when**: Cash flow management, collection policy evaluation, customer credit risk assessment. Landscape/construction typically 30-60 days.
+
+### Accounts Payable Turnover
+- **Formula**: `COGS / Average Accounts Payable`
+- **Definition**: How quickly the company pays its suppliers.
+- **Use when**: Supplier relationship management, cash flow timing optimization.
+
+### Days Payable Outstanding (DPO)
+- **Formula**: `(Average Accounts Payable / COGS) × 365`
+- **Definition**: Average number of days to pay suppliers.
+- **Use when**: Cash conversion cycle analysis, working capital optimization, vendor negotiation.
+
+### Cash Conversion Cycle (CCC)
+- **Formula**: `DIO + DSO - DPO`
+- **Definition**: Days between paying for inventory and collecting cash from sales.
+- **Use when**: Working capital efficiency, comparing operational cash needs across companies, identifying cash flow improvement opportunities.
+
+### Asset Turnover Ratio
+- **Formula**: `Revenue / Average Total Assets`
+- **Definition**: Revenue generated per dollar of assets.
+- **Use when**: DuPont analysis, evaluating asset utilization, comparing capital-light vs. capital-heavy business models.
+
+### Fixed Asset Turnover
+- **Formula**: `Revenue / Average Net Fixed Assets`
+- **Definition**: Revenue generated per dollar of fixed assets.
+- **Use when**: Capital expenditure efficiency, manufacturing capacity utilization, equipment-intensive business analysis.
+
+### Revenue per Employee
+- **Formula**: `Total Revenue / Number of Employees`
+- **Definition**: Productivity measure of revenue generation per headcount.
+- **Use when**: Workforce efficiency analysis, headcount planning, M&A staffing assessment.
+
+---
+
+## Valuation Ratios
+
+### Price-to-Earnings (P/E) Ratio
+- **Formula**: `Market Price per Share / Earnings per Share`
+- **Definition**: Market valuation relative to earnings.
+- **Use when**: Public company valuation, comparable company analysis. Forward P/E uses projected earnings.
+
+### EV/EBITDA (Enterprise Value Multiple)
+- **Formula**: `Enterprise Value / EBITDA`
+- **Definition**: Total company value relative to operating cash flow proxy.
+- **Use when**: Primary M&A valuation metric. Eliminates capital structure, tax, and depreciation differences. Industry-specific ranges apply.
+
+### EV/Revenue
+- **Formula**: `Enterprise Value / Revenue`
+- **Definition**: Total company value relative to revenue.
+- **Use when**: Valuing high-growth or unprofitable companies, SaaS businesses, early-stage companies where EBITDA is not meaningful.
+
+### Enterprise Value (EV)
+- **Formula**: `Market Cap + Total Debt - Cash + Minority Interest + Preferred Equity`
+- **For private companies**: `Implied Equity Value + Net Debt`
+- **Definition**: Total value of a business to all capital providers.
+- **Use when**: M&A transaction pricing, comparable analysis, any enterprise-level valuation.
+
+### Price-to-Book (P/B) Ratio
+- **Formula**: `Market Price per Share / Book Value per Share`
+- **Definition**: Market valuation relative to accounting net worth.
+- **Use when**: Asset-heavy industries (banking, real estate, manufacturing), identifying undervalued companies.
+
+### Price-to-Sales (P/S) Ratio
+- **Formula**: `Market Cap / Revenue`
+- **Definition**: Market valuation relative to revenue.
+- **Use when**: Valuing companies with negative earnings, high-growth companies, SaaS businesses.
+
+### PEG Ratio
+- **Formula**: `P/E Ratio / Earnings Growth Rate`
+- **Definition**: P/E adjusted for growth.
+- **Use when**: Comparing valuations across companies with different growth rates. PEG < 1 may indicate undervaluation.
+
+### Dividend Yield
+- **Formula**: `Annual Dividends per Share / Market Price per Share`
+- **Definition**: Annual dividend return relative to share price.
+- **Use when**: Income-focused investment analysis, REIT valuation, comparing yield investments.
+
+---
+
+## Cash Flow Metrics
+
+### Free Cash Flow (FCF)
+- **Formula**: `Operating Cash Flow - Capital Expenditures`
+- **Definition**: Cash available after maintaining/expanding the asset base.
+- **Use when**: DCF valuation, dividend capacity analysis, assessing true cash-generating ability.
+
+### Free Cash Flow to Firm (FCFF)
+- **Formula**: `EBIT × (1 - Tax Rate) + D&A - CapEx - ΔWorking Capital`
+- **Definition**: Cash available to all capital providers (debt + equity).
+- **Use when**: Enterprise DCF valuation, comparing firms with different capital structures.
+
+### Free Cash Flow to Equity (FCFE)
+- **Formula**: `FCFF - Interest × (1 - Tax Rate) + Net Borrowing`
+- **Definition**: Cash available to equity holders after debt service.
+- **Use when**: Equity valuation, leveraged buyout returns, dividend capacity.
+
+### Unlevered Free Cash Flow
+- **Formula**: `EBITDA - Taxes on EBIT - CapEx - ΔWorking Capital`
+- **Definition**: Cash flow before any debt-related payments.
+- **Use when**: DCF analysis (most common), M&A valuation, comparing companies with different leverage.
+
+### Levered Free Cash Flow
+- **Formula**: `Net Income + D&A - CapEx - ΔWorking Capital - Mandatory Debt Repayments`
+- **Definition**: Cash flow available to equity holders after all obligations.
+- **Use when**: Equity return analysis, LBO models, dividend sustainability.
+
+### Operating Cash Flow (OCF)
+- **Formula**: `Net Income + Non-Cash Charges + Changes in Working Capital`
+- **Definition**: Cash generated from core business operations.
+- **Use when**: Assessing actual cash generation vs. accrual earnings, quality of earnings analysis.
+
+### Cash Flow Conversion Ratio
+- **Formula**: `Free Cash Flow / Net Income` or `Operating Cash Flow / EBITDA`
+- **Definition**: How effectively earnings convert to actual cash.
+- **Use when**: Earnings quality assessment, identifying companies with aggressive accrual accounting.
+
+---
+
+## Return Metrics
+
+### Return on Equity (ROE)
+- **Formula**: `Net Income / Average Shareholders' Equity`
+- **Definition**: Return generated on shareholders' investment.
+- **Use when**: Measuring management effectiveness for equity holders, DuPont decomposition, comparing investment returns.
+
+### DuPont Analysis (3-Factor)
+- **Formula**: `ROE = Net Profit Margin × Asset Turnover × Equity Multiplier`
+- **Definition**: Decomposes ROE into profitability, efficiency, and leverage components.
+- **Use when**: Understanding what drives returns — profitability, asset efficiency, or financial leverage. Essential for strategic analysis.
+
+### DuPont Analysis (5-Factor)
+- **Formula**: `ROE = Tax Burden × Interest Burden × EBIT Margin × Asset Turnover × Equity Multiplier`
+- **Where**: Tax Burden = NI/EBT, Interest Burden = EBT/EBIT
+- **Definition**: Extended decomposition isolating tax and interest effects.
+- **Use when**: Cross-border comparisons, analyzing impact of capital structure and tax changes.
+
+### Return on Assets (ROA)
+- **Formula**: `Net Income / Average Total Assets`
+- **Definition**: Return generated on total assets regardless of financing.
+- **Use when**: Comparing profitability across companies with different capital structures, evaluating management's asset deployment.
+
+### Return on Invested Capital (ROIC)
+- **Formula**: `NOPAT / Invested Capital`
+- **Where**: `NOPAT = EBIT × (1 - Tax Rate)`, `Invested Capital = Total Debt + Equity - Cash`
+- **Definition**: Return on all capital invested in the business.
+- **Use when**: The gold standard for measuring value creation. ROIC > WACC = value creation. Used in EVA analysis.
+
+### Return on Capital Employed (ROCE)
+- **Formula**: `EBIT / (Total Assets - Current Liabilities)`
+- **Definition**: Return on long-term capital employed in the business.
+- **Use when**: Comparing operational returns across capital-intensive businesses, evaluating long-term capital efficiency.
+
+### Economic Value Added (EVA)
+- **Formula**: `NOPAT - (Invested Capital × WACC)`
+- **Definition**: Dollar value of economic profit above the cost of capital.
+- **Use when**: Measuring true value creation/destruction, executive compensation design, capital allocation decisions.
+
+### Internal Rate of Return (IRR)
+- **Formula**: Rate `r` where `NPV = Σ [CFt / (1+r)^t] = 0`
+- **Definition**: Annualized rate of return that makes NPV equal to zero.
+- **Use when**: Comparing investment opportunities, real estate project evaluation, private equity returns. Always pair with NPV for decision-making.
+
+### Modified Internal Rate of Return (MIRR)
+- **Formula**: `(FV of positive CFs at reinvestment rate / PV of negative CFs at finance rate)^(1/n) - 1`
+- **Definition**: IRR adjusted for realistic reinvestment and financing rate assumptions.
+- **Use when**: When IRR is misleading (multiple sign changes), or when reinvestment at IRR is unrealistic. More conservative than IRR.
+
+### Cash-on-Cash Return
+- **Formula**: `Annual Pre-Tax Cash Flow / Total Cash Invested`
+- **Definition**: Annual cash yield on invested capital.
+- **Use when**: Real estate investment analysis, quick comparison of cash-flowing investments.
+
+### Equity Multiple (MOIC)
+- **Formula**: `Total Distributions / Total Equity Invested`
+- **Definition**: Multiple of invested capital returned.
+- **Use when**: Private equity/real estate fund performance, waterfall calculations. Does not account for time value.
+
+### Payback Period
+- **Formula**: `Initial Investment / Annual Cash Flow` (simple) or cumulative cash flow method (discounted)
+- **Definition**: Time required to recover the initial investment.
+- **Use when**: Capital budgeting screening, risk assessment for equipment purchases, project approval.
+
+---
+
+## Growth Metrics
+
+### Revenue Growth Rate
+- **Formula**: `(Current Period Revenue - Prior Period Revenue) / Prior Period Revenue`
+- **Definition**: Percentage change in revenue period-over-period.
+- **Use when**: Trend analysis, forecasting, peer comparison.
+
+### Compound Annual Growth Rate (CAGR)
+- **Formula**: `(Ending Value / Beginning Value)^(1/n) - 1`
+- **Definition**: Smoothed annual growth rate over a multi-year period.
+- **Use when**: Long-term growth comparison, forecasting, smoothing volatility in annual figures.
+
+### Year-over-Year Growth (YoY)
+- **Formula**: `(Current Year Value - Prior Year Value) / Prior Year Value`
+- **Definition**: Annual change comparing same periods.
+- **Use when**: Seasonality-adjusted growth measurement, annual trend analysis.
+
+### Sustainable Growth Rate
+- **Formula**: `ROE × (1 - Dividend Payout Ratio)`
+- **Definition**: Maximum growth rate achievable without external financing.
+- **Use when**: Capacity planning, determining if growth plans require external funding.
+
+---
+
+## Break-Even & Margin Analysis
+
+### Break-Even Point (Units)
+- **Formula**: `Fixed Costs / (Selling Price per Unit - Variable Cost per Unit)`
+- **Definition**: Number of units that must be sold to cover all costs.
+- **Use when**: Pricing decisions, new product/service launch analysis, cost structure evaluation.
+
+### Break-Even Point (Revenue)
+- **Formula**: `Fixed Costs / Contribution Margin Ratio`
+- **Definition**: Revenue required to cover all costs.
+- **Use when**: Service businesses where unit-based analysis is impractical, overall profitability threshold.
+
+### Contribution Margin
+- **Formula**: `Revenue - Variable Costs`
+- **Definition**: Revenue available to cover fixed costs and generate profit.
+- **Use when**: Product line profitability, pricing decisions, make-vs-buy analysis.
+
+### Contribution Margin Ratio
+- **Formula**: `Contribution Margin / Revenue`
+- **Definition**: Percentage of each revenue dollar available for fixed costs and profit.
+- **Use when**: Break-even analysis, operating leverage assessment, margin of safety calculations.
+
+### Margin of Safety
+- **Formula**: `(Current Sales - Break-Even Sales) / Current Sales`
+- **Definition**: How far sales can drop before reaching break-even.
+- **Use when**: Risk assessment, downside scenario planning, operational cushion evaluation.
+
+### Operating Leverage (Degree of)
+- **Formula**: `Contribution Margin / Operating Income`
+- **Definition**: Sensitivity of operating income to revenue changes.
+- **Use when**: Understanding risk profile, forecasting earnings sensitivity, comparing business models.
+
+---
+
+## Discounted Cash Flow Formulas
+
+### Net Present Value (NPV)
+- **Formula**: `Σ [CFt / (1 + r)^t] - Initial Investment`
+- **Definition**: Present value of all future cash flows minus the initial investment.
+- **Use when**: The definitive investment decision metric. NPV > 0 = value-creating investment. Always use alongside IRR.
+
+### Present Value (PV)
+- **Formula**: `FV / (1 + r)^n`
+- **Definition**: Current worth of a future cash flow.
+- **Use when**: Discounting any future value to today, building DCF models, comparing cash flows at different times.
+
+### Future Value (FV)
+- **Formula**: `PV × (1 + r)^n`
+- **Definition**: Value of a current amount at a future date.
+- **Use when**: Projecting investment growth, retirement planning, loan balance projections.
+
+### PV of Annuity
+- **Formula**: `PMT × [(1 - (1 + r)^-n) / r]`
+- **Definition**: Present value of a series of equal periodic payments.
+- **Use when**: Loan valuation, lease analysis, pension obligations, level cash flow streams.
+
+### PV of Growing Annuity
+- **Formula**: `PMT × [(1 - ((1+g)/(1+r))^n) / (r - g)]`
+- **Definition**: Present value of a series of payments growing at a constant rate.
+- **Use when**: Valuing cash flows with expected growth (rent escalations, salary growth).
+
+### PV of Perpetuity
+- **Formula**: `PMT / r`
+- **Definition**: Present value of an infinite series of equal payments.
+- **Use when**: Preferred stock valuation, terminal value in simplified DCF.
+
+### Gordon Growth Model (PV of Growing Perpetuity)
+- **Formula**: `CF₁ / (r - g)` where `CF₁` is next period's cash flow
+- **Definition**: Present value of an infinite series of payments growing at a constant rate.
+- **Use when**: Terminal value calculation in DCF, dividend discount model, stable-growth company valuation.
+
+### Terminal Value (Exit Multiple Method)
+- **Formula**: `Terminal Year EBITDA × Exit Multiple / (1 + WACC)^n`
+- **Definition**: Value of the business beyond the explicit forecast period using comparable multiples.
+- **Use when**: DCF terminal value when market multiples are reliable. More common in practice than Gordon Growth for M&A.
+
+### Terminal Value (Perpetuity Growth Method)
+- **Formula**: `Terminal Year FCF × (1 + g) / (WACC - g)`
+- **Definition**: Value assuming cash flows grow at a constant rate forever.
+- **Use when**: DCF terminal value for stable, mature businesses. Terminal growth rate typically 2-3% (in line with GDP growth).
+
+### Mid-Year Convention Adjustment
+- **Formula**: `Discount factor = 1 / (1 + WACC)^(t - 0.5)`
+- **Definition**: Assumes cash flows occur mid-year rather than year-end.
+- **Use when**: Standard in DCF models for more accurate discounting, especially for businesses with evenly distributed cash flows.
+
+---
+
+## Weighted Average Cost of Capital
+
+### WACC
+- **Formula**: `(E/V × Re) + (D/V × Rd × (1 - Tax Rate))`
+- **Where**: E = equity value, D = debt value, V = E + D, Re = cost of equity, Rd = cost of debt
+- **Definition**: Blended cost of all capital sources weighted by their proportion.
+- **Use when**: DCF discount rate, ROIC comparison hurdle, investment decision threshold.
+
+### Cost of Equity (CAPM)
+- **Formula**: `Rf + β × (Rm - Rf)`
+- **Where**: Rf = risk-free rate, β = beta, Rm = market return
+- **Definition**: Required return for equity investors based on systematic risk.
+- **Use when**: WACC calculation, equity valuation, cost of capital estimation.
+
+### Cost of Equity (Build-Up Method)
+- **Formula**: `Rf + Equity Risk Premium + Size Premium + Company-Specific Risk Premium`
+- **Definition**: Required equity return built from component risk premiums.
+- **Use when**: Private company valuation where beta is unavailable. Common in small business and real estate.
+
+### Cost of Debt
+- **Formula**: `Interest Rate × (1 - Tax Rate)` (after-tax)
+- **Definition**: Effective borrowing cost after tax benefit of interest deductions.
+- **Use when**: WACC calculation, debt financing decisions, refinancing analysis.
+
+### Unlevered Beta
+- **Formula**: `Levered Beta / [1 + (1 - Tax Rate) × (D/E)]`
+- **Definition**: Beta stripped of financial leverage effects.
+- **Use when**: Relevering beta for a different capital structure, comparable company analysis with different leverage levels.
+
+### Levered Beta
+- **Formula**: `Unlevered Beta × [1 + (1 - Tax Rate) × (D/E)]`
+- **Definition**: Beta adjusted for the target company's capital structure.
+- **Use when**: CAPM when applying comparable company betas to a target with different leverage.
+
+---
+
+## Real Estate Formulas
+
+### Net Operating Income (NOI)
+- **Formula**: `Gross Rental Income - Vacancy Loss - Operating Expenses`
+- **Definition**: Income from property operations before debt service and taxes.
+- **Use when**: Property valuation, DSCR calculation, cap rate analysis. The fundamental metric in commercial real estate.
+
+### Capitalization Rate (Cap Rate)
+- **Formula**: `NOI / Property Value (or Purchase Price)`
+- **Definition**: Rate of return based on income a property is expected to generate.
+- **Use when**: Property valuation (Value = NOI / Cap Rate), market comparison, return benchmarking. Lower cap rate = higher value/lower yield.
+
+### Gross Rent Multiplier (GRM)
+- **Formula**: `Property Price / Gross Annual Rental Income`
+- **Definition**: Quick valuation metric based on gross income.
+- **Use when**: Quick screening and comparison of rental properties. Less precise than cap rate but useful for initial analysis.
+
+### Cash-on-Cash Return (Real Estate)
+- **Formula**: `Annual Pre-Tax Cash Flow / Total Cash Invested`
+- **Where**: Cash Invested includes down payment, closing costs, and initial improvements
+- **Definition**: Annual cash yield on actual dollars invested.
+- **Use when**: Comparing leveraged real estate returns, evaluating cash flow adequacy for investors.
+
+### Debt Yield
+- **Formula**: `NOI / Loan Amount`
+- **Definition**: Property yield relative to the loan amount.
+- **Use when**: Commercial lending metric increasingly used alongside DSCR and LTV. Typical minimums: 8-10%.
+
+### Loan-to-Value (LTV)
+- **Formula**: `Loan Amount / Property Value`
+- **Definition**: Loan amount as a percentage of property value.
+- **Use when**: Lending decisions, risk assessment. Typical commercial limits: 65-80%.
+
+### Operating Expense Ratio
+- **Formula**: `Operating Expenses / Gross Operating Income`
+- **Definition**: Percentage of income consumed by operating costs.
+- **Use when**: Property efficiency analysis, comparing management effectiveness, identifying cost reduction opportunities.
+
+### Effective Gross Income (EGI)
+- **Formula**: `Potential Gross Income - Vacancy & Collection Loss + Other Income`
+- **Definition**: Realistic gross income accounting for vacancy and ancillary revenue.
+- **Use when**: Pro-forma construction, NOI calculation, realistic income projections.
+
+### Price per Square Foot
+- **Formula**: `Purchase Price / Total Square Footage`
+- **Definition**: Normalized price metric for property comparison.
+- **Use when**: Comparable property analysis, market benchmarking, quick valuation screening.
+
+### Price per Unit
+- **Formula**: `Purchase Price / Number of Units`
+- **Definition**: Normalized price per residential or commercial unit.
+- **Use when**: Multifamily and commercial property comparison.
+
+### Replacement Cost
+- **Formula**: `Land Value + (Construction Cost per SF × Buildable SF) + Soft Costs`
+- **Definition**: Cost to build an equivalent property from scratch.
+- **Use when**: Value-add analysis (buy below replacement cost), insurance, development feasibility.
+
+### Development Yield (Yield on Cost)
+- **Formula**: `Stabilized NOI / Total Development Cost`
+- **Definition**: Expected return on total development investment.
+- **Use when**: Ground-up development feasibility, comparing development vs. acquisition returns. Should exceed market cap rate by a development spread (typically 100-200 bps).
+
+---
+
+## M&A Formulas
+
+### Accretion/Dilution
+- **Formula**: `(Pro Forma EPS - Standalone EPS) / Standalone EPS`
+- **Definition**: Whether an acquisition increases (accretive) or decreases (dilutive) the acquirer's EPS.
+- **Use when**: Public company M&A, stock-for-stock transactions, assessing impact on acquiring shareholders.
+
+### Synergy Value
+- **Formula**: `PV of Revenue Synergies + PV of Cost Synergies - Integration Costs`
+- **Definition**: Additional value created by combining two companies.
+- **Use when**: M&A pricing, premium justification, integration planning.
+
+### Purchase Premium
+- **Formula**: `(Offer Price - Pre-Announcement Price) / Pre-Announcement Price`
+- **Definition**: Premium paid above current market value.
+- **Use when**: M&A offer analysis, fairness opinions, precedent transaction analysis. Typical range: 20-40%.
+
+### Goodwill
+- **Formula**: `Purchase Price - Fair Value of Net Identifiable Assets`
+- **Definition**: Excess of purchase price over fair value of acquired net assets.
+- **Use when**: Purchase price allocation, balance sheet pro-forma, impairment analysis.
+
+### Pro-Forma Ownership
+- **Formula**: `Shares Issued to Target / (Acquirer Shares + Shares Issued to Target)`
+- **Definition**: Target shareholders' ownership in combined entity.
+- **Use when**: Stock-for-stock M&A, merger of equals, dilution analysis.
+
+### Implied Enterprise Value (from transaction)
+- **Formula**: `Equity Offer Price × Target Shares + Target Net Debt`
+- **Definition**: Total enterprise value implied by the acquisition offer.
+- **Use when**: Extracting valuation multiples from precedent transactions.
+
+### Contribution Analysis
+- **Formula**: `Entity Metric / Combined Metric` (for revenue, EBITDA, assets, etc.)
+- **Definition**: Each party's relative contribution to the combined entity.
+- **Use when**: Merger of equals, determining fair exchange ratio, negotiation support.
+
+---
+
+## Debt & Coverage Ratios
+
+### Debt Service Coverage Ratio (DSCR)
+- **Formula**: `NOI / (Principal + Interest Payments)`
+- **Definition**: Ability to service debt obligations from operating income.
+- **Use when**: Loan underwriting, covenant compliance, real estate lending. Minimum 1.20x typical.
+
+### Fixed Charge Coverage Ratio
+- **Formula**: `(EBITDA - Unfunded CapEx) / (Interest + Scheduled Principal + Preferred Dividends)`
+- **Definition**: Comprehensive debt service coverage including all fixed obligations.
+- **Use when**: Senior debt underwriting, SBA lending (1.25x minimum), comprehensive credit analysis.
+
+### Loan Life Coverage Ratio (LLCR)
+- **Formula**: `NPV of Cash Flows Over Loan Life / Outstanding Debt`
+- **Definition**: Present value of available cash flows relative to total debt.
+- **Use when**: Project finance, infrastructure lending, long-term debt assessment.
+
+### Interest Coverage Ratio
+- **Formula**: `EBIT / Interest Expense`
+- **Definition**: Earnings available to cover interest obligations.
+- **Use when**: Credit analysis, debt capacity assessment. Below 2.0x is generally concerning.
+
+---
+
+## Working Capital Metrics
+
+### Working Capital Turnover
+- **Formula**: `Revenue / Average Net Working Capital`
+- **Definition**: Revenue generated per dollar of working capital.
+- **Use when**: Working capital efficiency, identifying over/under-capitalized operations.
+
+### Net Working Capital % of Revenue
+- **Formula**: `Net Working Capital / Revenue`
+- **Definition**: Working capital intensity of the business.
+- **Use when**: M&A working capital targets, projecting working capital needs for growth, industry benchmarking.
+
+### Working Capital Adjustment (M&A)
+- **Formula**: `Actual NWC at Close - Target NWC (Peg)`
+- **Definition**: Purchase price adjustment for working capital above or below agreed target.
+- **Use when**: M&A closings, purchase agreement negotiations, post-closing true-ups.
+
+---
+
+## Statistical & Forecasting Formulas
+
+### Simple Moving Average
+- **Formula**: `Sum of last n periods / n`
+- **Definition**: Average value over a rolling window.
+- **Use when**: Smoothing short-term volatility, identifying trends in revenue or cost data.
+
+### Weighted Moving Average
+- **Formula**: `Σ (Weight_i × Value_i) / Σ Weights`
+- **Definition**: Moving average with more weight on recent observations.
+- **Use when**: Forecasting with emphasis on recent trends, seasonal demand planning.
+
+### Exponential Smoothing
+- **Formula**: `Forecast_t = α × Actual_(t-1) + (1 - α) × Forecast_(t-1)`
+- **Definition**: Weighted average with exponentially decreasing weights on older data.
+- **Use when**: Short-term forecasting, demand planning, when recent data is most relevant.
+
+### Linear Regression (Trend)
+- **Formula**: `y = mx + b` where `m = Σ(xi-x̄)(yi-ȳ) / Σ(xi-x̄)²`
+- **Definition**: Best-fit line through historical data points.
+- **Use when**: Revenue trend forecasting, cost estimation, identifying growth trajectories.
+
+### Coefficient of Variation
+- **Formula**: `Standard Deviation / Mean`
+- **Definition**: Standardized measure of dispersion.
+- **Use when**: Comparing volatility across different metrics or companies, risk assessment.
+
+### Z-Score (Altman)
+- **Formula**: `Z = 1.2A + 1.4B + 3.3C + 0.6D + 1.0E`
+- **Where**: A=WC/TA, B=RE/TA, C=EBIT/TA, D=MV Equity/BV Debt, E=Sales/TA
+- **Definition**: Bankruptcy prediction score.
+- **Use when**: Credit risk assessment, distressed company analysis. Z < 1.81 = distress zone, Z > 2.99 = safe zone.
+
+### Variance Analysis
+- **Formula**: `Actual - Budget` (favorable if positive for revenue, unfavorable if positive for costs)
+- **Volume Variance**: `(Actual Qty - Budget Qty) × Budget Price`
+- **Price Variance**: `(Actual Price - Budget Price) × Actual Qty`
+- **Mix Variance**: `(Actual Mix% - Budget Mix%) × Total Actual Qty × Budget CM`
+- **Definition**: Decomposition of budget vs. actual differences.
+- **Use when**: Monthly/quarterly performance reviews, identifying root causes of over/under-performance.
+
+---
+
+## Depreciation Methods
+
+### Straight-Line Depreciation
+- **Formula**: `(Cost - Salvage Value) / Useful Life`
+- **Definition**: Equal annual depreciation expense.
+- **Use when**: Financial reporting (most common method), simple models, when asset usage is even over time.
+
+### Double-Declining Balance
+- **Formula**: `2 × (1 / Useful Life) × Book Value at Beginning of Year`
+- **Definition**: Accelerated depreciation with decreasing annual expense.
+- **Use when**: Assets that lose value quickly early, tax planning (front-load deductions).
+
+### MACRS (Modified Accelerated Cost Recovery System)
+- **Definition**: IRS-prescribed depreciation rates by asset class.
+- **Common classes**: 5-year (vehicles, computers), 7-year (furniture, equipment), 15-year (land improvements), 27.5-year (residential rental), 39-year (commercial property)
+- **Use when**: Tax return preparation, after-tax cash flow modeling, tax planning.
+
+### Units of Production
+- **Formula**: `(Cost - Salvage) × (Actual Units / Total Expected Units)`
+- **Definition**: Depreciation based on actual usage.
+- **Use when**: Equipment with variable usage (construction, manufacturing), matching expense to revenue.
+
+### Section 179 Deduction
+- **Definition**: Immediate expensing of qualifying asset purchases up to the annual limit.
+- **Use when**: Tax planning, small business equipment purchases, first-year deduction optimization.
+
+### Bonus Depreciation
+- **Definition**: Additional first-year depreciation (100% through 2022, phasing down 20% per year).
+- **Use when**: Tax planning, capital expenditure timing decisions, cash flow optimization.
+
+---
+
+## Tax-Related Formulas
+
+### Effective Tax Rate
+- **Formula**: `Total Tax Expense / Pre-Tax Income`
+- **Definition**: Actual tax rate paid on earnings.
+- **Use when**: Cross-company comparison, NOPAT calculation, true tax burden assessment.
+
+### Marginal Tax Rate
+- **Definition**: Tax rate on the next dollar of income based on tax brackets.
+- **Use when**: Incremental investment decisions, WACC calculation, bonus/compensation planning.
+
+### Tax Shield (Debt)
+- **Formula**: `Interest Expense × Tax Rate`
+- **Definition**: Tax savings from deductible interest payments.
+- **Use when**: Capital structure optimization, APV valuation method, leveraged buyout modeling.
+
+### After-Tax Cost of Debt
+- **Formula**: `Pre-Tax Cost of Debt × (1 - Tax Rate)`
+- **Definition**: True cost of borrowing after tax benefit.
+- **Use when**: WACC calculation, debt vs. equity financing comparison.
+
+### After-Tax Proceeds (Asset Sale)
+- **Formula**: `Sale Price - Tax on Gain`
+- **Where**: `Tax on Gain = (Sale Price - Book Value) × Tax Rate`
+- **Definition**: Net cash received after selling an asset and paying taxes.
+- **Use when**: Disposition analysis, replacement decisions, terminal value in project analysis.
+
+### 1031 Exchange Basis
+- **Formula**: `New Property Basis = Old Property Basis + Boot Paid - Boot Received + Gain Recognized`
+- **Definition**: Tax basis of replacement property in a like-kind exchange.
+- **Use when**: Real estate disposition planning, tax-deferred exchange structuring.
